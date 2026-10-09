@@ -4,7 +4,7 @@
 
 ## Открыть в браузере
 
-После публикации живая ссылка появится здесь.
+https://mariasinelnikova-dev.github.io/chatbot-usability-test/
 
 Локально:
 
