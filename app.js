@@ -744,6 +744,7 @@ function appendRefundWidget() {
   `;
 
   chatBubblesEl.appendChild(widget);
+  setSuggests(["Не возвращать"]);
   requestAnimationFrame(() => {
     requestAnimationFrame(updateRefundMoreBtn);
   });

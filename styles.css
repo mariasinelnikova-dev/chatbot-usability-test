@@ -2111,8 +2111,14 @@ body {
   gap: 8px;
   justify-content: flex-end;
   align-items: flex-start;
+  flex: 0 0 auto;
   width: 100%;
-  margin-top: auto;
+  padding: 0 16px 16px;
+}
+
+.chat-suggests:empty {
+  display: none;
+  padding: 0;
 }
 
 .chat-suggest {
