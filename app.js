@@ -142,6 +142,17 @@ function renderOrderCard(order) {
 
 const BOT_REPLIES = [
   {
+    match: /^не возвращать$/i,
+    render: () => {
+      collapseRefundWidget();
+      appendBotBubble(
+        "Понял, билеты остаются у вас, можно спокойно лететь 💙"
+      );
+    },
+    suggests: ["Спасибо всё понятно"],
+    nextState: null,
+  },
+  {
     match: (userText) => isRefundDocsMessage(userText),
     render: () => {
       collapseRefundWidget();
@@ -222,6 +233,7 @@ const BOT_REPLIES = [
       conversationData.email = "maria.kalimullin@aviasales.ru";
       appendRefundWidget();
     },
+    suggests: ["Не возвращать"],
     placeholder: "Напишите что-нибудь",
     nextState: "awaiting-refund",
   },
