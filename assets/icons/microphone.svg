@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Controls/Microphone">
+<g id="icon">
+<path d="M7 11C7 13.7614 9.23858 16 12 16C14.7614 16 17 13.7614 17 11H19C19 14.5264 16.3921 17.4414 13 17.9268V21H11V17.9268C7.60787 17.4414 5 14.5264 5 11H7Z" fill="#0C73FE"/>
+<path d="M12 3C13.6569 3 15 4.34315 15 6V11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11V6C9 4.34315 10.3431 3 12 3Z" fill="#0C73FE"/>
+</g>
+</g>
+</svg>

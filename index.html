@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mainpage iOS Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-root">
+      <section class="phone-frame is-profile is-support" aria-label="Mainpage iOS viewport 390x844">
+        <div class="content-scroll screen-main" hidden>
+          <header class="hero">
+            <h1 class="hero-title">Тут покупают<br />дешёвые авиабилеты</h1>
+            <div class="search-card">
+              <span class="search-icon" aria-hidden="true">
+                <img src="./assets/icons/search.svg" alt="" />
+              </span>
+              <div class="search-row search-row-top">
+                <span class="search-text strong">Москва</span>
+              </div>
+              <div class="search-divider"></div>
+              <div class="search-row search-row-bottom">
+                <span class="search-text muted">Куда — Сочи</span>
+                <span class="search-cursor" aria-hidden="true"></span>
+              </div>
+            </div>
+          </header>
+
+          <section class="services">
+            <article class="service-item">
+              <img class="sticker-icon" src="./assets/icons/hot-tickets.svg" alt="" />
+              <p>Горячие<br />билеты</p>
+            </article>
+            <article class="service-item">
+              <img class="sticker-icon" src="./assets/icons/anywhere.svg" alt="" />
+              <p>Куда<br />угодно</p>
+            </article>
+            <article class="service-item">
+              <img class="sticker-icon" src="./assets/icons/smart-search.svg" alt="" />
+              <p>Умный<br />поиск</p>
+            </article>
+            <article class="service-item">
+              <img class="sticker-icon" src="./assets/icons/complex-route.svg" alt="" />
+              <p>Сложный<br />маршрут</p>
+            </article>
+          </section>
+
+          <section class="hot-tickets">
+            <img class="hot-fire" src="./assets/icons/fire.png" alt="" />
+
+            <div class="hot-title">
+              <h2>Горячие билеты</h2>
+              <p class="hot-subtitle">Скоро разберут!</p>
+            </div>
+
+            <div class="tickets-row">
+              <article class="ticket-card">
+                <span class="ticket-badge">Нашли только что</span>
+                <div class="ticket-topbar">
+                  <div class="ticket-prices">
+                    <span class="price-current">22&nbsp;465&nbsp;₽</span>
+                    <span class="price-old">22&nbsp;465&nbsp;₽</span>
+                  </div>
+                  <button class="fav-btn" type="button" aria-label="В избранное">
+                    <img src="https://www.figma.com/api/mcp/asset/4b03622b-1985-443e-9aa2-75531d57337c" alt="" />
+                  </button>
+                </div>
+                <p class="ticket-route">Санкт-Петербург — Москва</p>
+                <div class="ticket-itinerary">
+                  <img class="airline-logo" src="https://www.figma.com/api/mcp/asset/78859f1c-dbcf-45a5-b955-a7e82dcb0d87" alt="" />
+                  <div class="ticket-dates">
+                    <div class="dates-row">
+                      <span class="dates-day">15 авг, вт</span>
+                    </div>
+                    <div class="dates-row dates-row-times">
+                      <span class="dates-time">22:30</span>
+                      <span class="dash dash-small"></span>
+                      <span class="dates-time">00:05</span>
+                    </div>
+                  </div>
+                  <p class="ticket-stops">
+                    8&nbsp;ч&nbsp;в&nbsp;пути <span class="slash">/</span> 1&nbsp;пересадка
+                  </p>
+                </div>
+              </article>
+
+              <article class="ticket-card ticket-card-peek" aria-hidden="true">
+                <div class="ticket-topbar">
+                  <div class="ticket-prices">
+                    <span class="price-current">22&nbsp;465&nbsp;₽</span>
+                    <span class="price-old">22&nbsp;465&nbsp;₽</span>
+                  </div>
+                  <button class="fav-btn" type="button" aria-label="В избранное" tabindex="-1">
+                    <img src="https://www.figma.com/api/mcp/asset/4b03622b-1985-443e-9aa2-75531d57337c" alt="" />
+                  </button>
+                </div>
+                <p class="ticket-route">Санкт-Петербург — Москва</p>
+                <div class="ticket-itinerary">
+                  <img class="airline-logo" src="https://www.figma.com/api/mcp/asset/78859f1c-dbcf-45a5-b955-a7e82dcb0d87" alt="" />
+                  <div class="ticket-dates">
+                    <div class="dates-row">
+                      <span class="dates-day">15 авг, вт</span>
+                    </div>
+                    <div class="dates-row dates-row-times">
+                      <span class="dates-time">22:30</span>
+                      <span class="dash dash-small"></span>
+                      <span class="dates-time">00:05</span>
+                    </div>
+                  </div>
+                  <p class="ticket-stops">
+                    8&nbsp;ч&nbsp;в&nbsp;пути <span class="slash">/</span> 1&nbsp;пересадка
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <button class="hot-btn" type="button">Больше жарких билетов</button>
+          </section>
+
+          <section class="russia-section">
+            <h3>Это можно в России</h3>
+            <div class="places-row">
+              <article class="place-card">
+                <img class="place-photo" src="https://www.figma.com/api/mcp/asset/cb662dfc-a6b3-41f2-883a-b81588a44be5" alt="" />
+                <p class="place-title">Посмотреть на столицу красавицу</p>
+                <p class="place-city">Москва</p>
+                <p class="place-price">
+                  <span class="place-plane" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 5.5l-4.2-1L4.5 1.5H3.6l1.3 3.4L2 5.3l-.6-.9H.75L1.4 6 0.75 7.6h.65l.6-.9 2.9.4-1.3 3.4h.9L6.9 7.5l4.35-1c.275-.07.5-.31.5-.5s-.225-.43-.5-.5z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  от 21&nbsp;777&nbsp;₽
+                </p>
+              </article>
+              <article class="place-card">
+                <img class="place-photo" src="https://www.figma.com/api/mcp/asset/e0f129ed-e2c9-4ed2-8109-0997a4337608" alt="" />
+                <p class="place-title">Подышать паром в Долине гейзеров</p>
+                <p class="place-city">Петропавловск-камчатский</p>
+                <p class="place-price">
+                  <span class="place-plane" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 5.5l-4.2-1L4.5 1.5H3.6l1.3 3.4L2 5.3l-.6-.9H.75L1.4 6 0.75 7.6h.65l.6-.9 2.9.4-1.3 3.4h.9L6.9 7.5l4.35-1c.275-.07.5-.31.5-.5s-.225-.43-.5-.5z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  от 56&nbsp;622&nbsp;₽
+                </p>
+              </article>
+              <article class="place-card">
+                <img class="place-photo" src="https://www.figma.com/api/mcp/asset/cb662dfc-a6b3-41f2-883a-b81588a44be5" alt="" />
+                <p class="place-title">Освежиться у Агурских водопадов</p>
+                <p class="place-city">Сочи</p>
+                <p class="place-price">
+                  <span class="place-plane" aria-hidden="true">
+                    <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.25 5.5l-4.2-1L4.5 1.5H3.6l1.3 3.4L2 5.3l-.6-.9H.75L1.4 6 0.75 7.6h.65l.6-.9 2.9.4-1.3 3.4h.9L6.9 7.5l4.35-1c.275-.07.5-.31.5-.5s-.225-.43-.5-.5z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  от 18&nbsp;340&nbsp;₽
+                </p>
+              </article>
+            </div>
+            <button class="places-btn" type="button">Показать все места</button>
+          </section>
+        </div>
+
+        <div class="content-scroll screen-profile">
+          <header class="profile-header">
+            <h1 class="profile-name">Мария</h1>
+            <div class="profile-email-row">
+              <span class="profile-email">maria.kalimullin@aviasales.ru</span>
+              <img class="profile-pencil" src="./assets/icons/profile/pencil.svg" alt="" />
+            </div>
+          </header>
+
+          <div class="profile-content">
+            <div class="profile-cards">
+              <article class="booking-card" id="profileBookingCard" data-action="open-order" role="button" tabindex="0">
+                <div class="booking-card-header">
+                  <span class="booking-badge">Билет от Авиасейлс</span>
+                  <img class="chevron-right" src="./assets/icons/profile/chevron.svg" alt="" />
+                </div>
+                <div class="booking-card-text">
+                  <h2 class="booking-title">Москва — Владивосток</h2>
+                  <p class="booking-meta">
+                    <span>4 ноя 2023</span>
+                    <span class="dot">•</span>
+                    <span>2 пассажира</span>
+                  </p>
+                </div>
+              </article>
+
+              <article class="settings-card">
+                <div class="settings-head">
+                  <p class="settings-title">Настройки</p>
+                </div>
+                <button class="settings-row" type="button">
+                  <span class="settings-label">Личные данные</span>
+                  <img class="chevron-right small" src="./assets/icons/profile/chevron.svg" alt="" />
+                </button>
+                <div class="settings-divider"></div>
+                <button class="settings-row" type="button">
+                  <span class="settings-label">Региональные</span>
+                  <img class="chevron-right small" src="./assets/icons/profile/chevron.svg" alt="" />
+                </button>
+                <div class="settings-divider"></div>
+                <button class="settings-row" type="button">
+                  <img class="settings-icon" src="./assets/icons/profile/warning.svg" alt="" />
+                  <span class="settings-label">Уведомления</span>
+                  <img class="chevron-right small" src="./assets/icons/profile/chevron.svg" alt="" />
+                </button>
+                <div class="settings-divider"></div>
+                <button class="settings-row" type="button">
+                  <span class="settings-label">Конфиденциальность</span>
+                  <img class="chevron-right small" src="./assets/icons/profile/chevron.svg" alt="" />
+                </button>
+              </article>
+
+              <article class="support-card">
+                <div class="support-text">
+                  <div class="support-title-row">
+                    <img class="support-icon" src="./assets/icons/profile/smart-support.svg" alt="" />
+                    <h3 class="support-title">Умная поддержка</h3>
+                  </div>
+                  <p class="support-desc">Знает всё про билеты, перелёты и багаж</p>
+                </div>
+                <button class="support-btn" id="supportAskBtn" type="button">Задать вопрос</button>
+              </article>
+
+              <article class="docs-card">
+                <div class="docs-header">
+                  <p class="docs-title">Документы</p>
+                  <button class="docs-add" type="button" aria-label="Добавить документ">
+                    <img src="./assets/icons/profile/plus.svg" alt="" />
+                  </button>
+                </div>
+                <div class="docs-grid">
+                  <div class="doc-tile">
+                    <p class="doc-subtitle">Паспорт РФ</p>
+                    <p class="doc-name">Олег П.</p>
+                    <img class="doc-icon" src="./assets/icons/profile/russian-passport.svg" alt="" />
+                  </div>
+                  <div class="doc-tile">
+                    <p class="doc-subtitle">Загранпаспорт</p>
+                    <p class="doc-name">Konstantin K.</p>
+                    <img class="doc-icon" src="./assets/icons/profile/globe-anywhere.svg" alt="" />
+                  </div>
+                  <div class="doc-tile doc-tile-warning">
+                    <p class="doc-subtitle warning">Истекает срок</p>
+                    <p class="doc-name">Alena Z.</p>
+                    <img class="doc-icon" src="./assets/icons/profile/globe-anywhere.svg" alt="" />
+                  </div>
+                  <div class="doc-tile">
+                    <p class="doc-subtitle">Паспорт РФ</p>
+                    <p class="doc-name">Алёна З.</p>
+                    <img class="doc-icon" src="./assets/icons/profile/russian-passport.svg" alt="" />
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <section class="screen-support" id="screenSupport" aria-hidden="false">
+          <div class="ios-statusbar" aria-hidden="true">
+            <span class="ios-statusbar-time">9:41</span>
+            <img class="ios-statusbar-levels" src="./assets/icons/ios-statusbar-levels.svg" alt="" />
+          </div>
+          <header class="support-navbar">
+            <button class="support-back" id="supportBackBtn" type="button" aria-label="Назад">
+              <img src="./assets/icons/profile/chevron.svg" alt="" />
+            </button>
+            <div class="support-navtitle">
+              <p class="support-navtitle-main">Умная поддержка</p>
+              <p class="support-navtitle-sub">Первая версия нейросети</p>
+            </div>
+          </header>
+
+          <div class="support-chat">
+            <div class="chat-bubbles">
+              <div class="chat-bubble chat-bubble-user">
+                Как вернуть билет
+                <img class="chat-bubble-tail" src="./assets/icons/chat-user-tail.svg" alt="" aria-hidden="true" />
+              </div>
+              <div class="chat-bubble chat-widget">
+                <div class="widget-text">
+                  <p>По какому заказу у вас вопрос?</p>
+                </div>
+                <div class="widget-orders">
+                  <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Стамбул — Екатеринбург" data-order-date="24 дек, чт — 25 дек, пн" data-order-passengers="3">
+                    <div class="order-card-row">
+                      <div class="order-details">
+                        <p class="order-title">Стамбул — Екатеринбург</p>
+                        <p class="order-date">24 дек, чт — 25 дек, пн</p>
+                      </div>
+                      <span class="order-logos" aria-hidden="true">
+                        <span class="order-airline-logo"><img src="./assets/icons/orders/airline-s7.png" alt="" /></span>
+                        <span class="order-airline-logo"><img src="./assets/icons/orders/airline-redwings.png" alt="" /></span>
+                      </span>
+                    </div>
+                  </button>
+                  <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Москва — Уфа" data-order-date="24 дек, чт — 25 дек, пн" data-order-passengers="3">
+                    <span class="order-badge">Билет от Авиасейлс</span>
+                    <div class="order-card-row">
+                      <div class="order-details">
+                        <p class="order-title">Москва — Уфа</p>
+                        <p class="order-date">24 дек, чт — 25 дек, пн</p>
+                      </div>
+                      <span class="order-logos" aria-hidden="true">
+                        <span class="order-airline-logo"><img src="./assets/icons/orders/airline-aeroflot.png" alt="" /></span>
+                      </span>
+                    </div>
+                  </button>
+                  <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Стамбул — Екатеринбург" data-order-date="28 дек, сб — 30 дек, пн" data-order-passengers="3">
+                    <div class="order-card-row">
+                      <div class="order-details">
+                        <p class="order-title">Стамбул — Екатеринбург</p>
+                        <p class="order-date">28 дек, сб — 30 дек, пн</p>
+                      </div>
+                      <span class="order-logos" aria-hidden="true">
+                        <span class="order-airline-logo"><img src="./assets/icons/orders/airline-s7.png" alt="" /></span>
+                        <span class="order-airline-logo"><img src="./assets/icons/orders/airline-redwings.png" alt="" /></span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <button class="widget-btn" type="button">Посмотреть все заказы</button>
+              </div>
+            </div>
+
+            <div class="chat-suggests">
+              <button class="chat-suggest" type="button">Нет нужного заказа</button>
+            </div>
+          </div>
+
+          <form class="support-input" id="supportForm">
+            <div class="support-input-files" id="supportInputFiles" hidden></div>
+            <div class="support-input-row">
+              <input class="support-input-field" id="supportInput" type="text" placeholder="Напишите что-нибудь" aria-label="Сообщение" autocomplete="off" />
+              <button class="support-send-btn" id="supportSendBtn" type="submit" aria-label="Отправить">
+                <span class="support-send-circle" aria-hidden="true"></span>
+                <img class="support-mic-icon" src="./assets/icons/microphone.svg" alt="" aria-hidden="true" />
+                <svg class="support-send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M20.2061 6L21 7.4L12.5605 22L11.4756 21.71L10.4141 13.9463L15.335 11.0156L14.3115 9.29688L9.44824 12.1934L3 7.08105L3.29004 6H20.2061Z" fill="currentColor"/>
+                </svg>
+                <svg class="support-stop-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <button class="refund-more-btn" id="refundMoreBtn" type="button" hidden aria-label="Показать ещё">
+            <img src="./assets/icons/arrow-down.svg" alt="" />
+          </button>
+        </section>
+
+        <section class="screen-orders" id="screenOrders" aria-hidden="true">
+          <header class="ord-navbar">
+            <button class="ord-back" id="ordersBackBtn" type="button" aria-label="Назад">
+              <img src="./assets/icons/profile/chevron.svg" alt="" />
+            </button>
+            <button class="ord-nav-action" type="button" aria-label="Добавить в календарь">
+              <img src="./assets/icons/orders/calendar-add.png" alt="" />
+            </button>
+          </header>
+
+          <div class="ord-scroll">
+            <div class="ord-main">
+              <article class="ord-card ord-flight-card">
+                <div class="ord-badges">
+                  <span class="ord-badge ord-badge-brand">Билет от Авиасейлс</span>
+                  <span class="ord-badge ord-badge-green">Оплачен</span>
+                </div>
+                <div class="ord-row-header">
+                  <div class="ord-row-text">
+                    <h2 class="ord-row-title">Москва — Владивосток</h2>
+                    <p class="ord-row-meta">8ч 5м в пути</p>
+                  </div>
+                  <span class="ord-chev-down" aria-hidden="true">
+                    <img src="./assets/icons/profile/chevron.svg" alt="" />
+                  </span>
+                </div>
+                <div class="ord-itinerary">
+                  <div class="ord-itinerary-head">
+                    <span class="ord-airline-logo" aria-hidden="true">
+                      <img src="./assets/icons/orders/airline-aeroflot.png" alt="" />
+                    </span>
+                    <div class="ord-airline-text">
+                      <p class="ord-airline-name">Аэрофлот</p>
+                      <p class="ord-airline-time">8ч 5м в полёте</p>
+                    </div>
+                    <button class="ord-pill-btn" type="button">Подробнее</button>
+                  </div>
+                  <div class="ord-routes">
+                    <div class="ord-routes-icon" aria-hidden="true">
+                      <img src="./assets/icons/orders/route-dots.svg" alt="" />
+                    </div>
+                    <div class="ord-routes-text">
+                      <div class="ord-route-row">
+                        <div class="ord-route-time">
+                          <span class="ord-route-hh">13:40</span>
+                          <span class="ord-route-date">4 ноя, пт</span>
+                        </div>
+                        <div class="ord-route-place">
+                          <span class="ord-route-city">Москва</span>
+                          <span class="ord-route-airport">Шереметьево, SVO</span>
+                        </div>
+                      </div>
+                      <div class="ord-route-row">
+                        <div class="ord-route-time">
+                          <span class="ord-route-hh">21:25</span>
+                          <span class="ord-route-date">4 ноя, пт</span>
+                        </div>
+                        <div class="ord-route-place">
+                          <span class="ord-route-city">Владивосток</span>
+                          <span class="ord-route-airport">Кневичи, VVO</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ord-flight-buttons">
+                  <button class="ord-secondary-btn" type="button">
+                    <img class="ord-icon-24" src="./assets/icons/orders/download-dark.svg" alt="" />
+                    Скачать билет
+                  </button>
+                  <button class="ord-text-btn" type="button">К управлению заказом</button>
+                </div>
+              </article>
+
+              <article class="ord-card ord-list-row ord-list-expand" id="ordPaxCard">
+                <div class="ord-row-header ord-row-header-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="ordPaxBody" data-action="toggle-pax">
+                  <div class="ord-row-text">
+                    <h2 class="ord-row-title">2 пассажира</h2>
+                    <p class="ord-row-meta">Konstantin Konstantinopolsky, Анна Сергеевна Ким</p>
+                  </div>
+                  <span class="ord-chev-down" aria-hidden="true">
+                    <img src="./assets/icons/profile/chevron.svg" alt="" />
+                  </span>
+                </div>
+
+                <div class="ord-row-body" id="ordPaxBody" hidden>
+                  <div class="ord-pax-section">
+                    <span class="ord-pax-icon ord-pax-icon-blue" aria-hidden="true">
+                      <img src="./assets/icons/orders/passenger.png" alt="" />
+                    </span>
+                    <div class="ord-pax-content">
+                      <div class="ord-pax-head">
+                        <p class="ord-pax-name">Konstantin Konstantinopolsky</p>
+                        <p class="ord-pax-sub">Взрослый</p>
+                      </div>
+                      <p class="ord-pax-line">03.08.1989, Казахстан</p>
+                      <div class="ord-pax-doc">
+                        <p class="ord-pax-label">Паспорт</p>
+                        <p class="ord-pax-value">5518 993146, до 12.04.2025</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ord-pax-divider"></div>
+
+                  <div class="ord-pax-section">
+                    <span class="ord-pax-icon ord-pax-icon-blue" aria-hidden="true">
+                      <img src="./assets/icons/orders/passenger.png" alt="" />
+                    </span>
+                    <div class="ord-pax-content">
+                      <div class="ord-pax-head">
+                        <p class="ord-pax-name">Анна Сергеевна Ким</p>
+                        <p class="ord-pax-sub">Взрослый</p>
+                      </div>
+                      <p class="ord-pax-line">15.10.1991, Россия</p>
+                      <div class="ord-pax-doc">
+                        <p class="ord-pax-label">Паспорт РФ</p>
+                        <p class="ord-pax-value">7516 881002</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ord-pax-divider"></div>
+
+                  <div class="ord-pax-section">
+                    <span class="ord-pax-icon ord-pax-icon-purple" aria-hidden="true">
+                      <img src="./assets/icons/orders/mail.png" alt="" />
+                    </span>
+                    <div class="ord-pax-content">
+                      <div class="ord-pax-row">
+                        <p class="ord-pax-name">Контакты</p>
+                        <button class="ord-pax-pill" type="button">Изменить</button>
+                      </div>
+                      <p class="ord-pax-line" id="ordPaxEmail">konstantin.konstantinopolsky@gmail.com</p>
+                      <p class="ord-pax-line">+7 905 787 65 65</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="ord-card ord-list-row">
+                <div class="ord-row-header ord-row-header-static">
+                  <div class="ord-row-text">
+                    <h2 class="ord-row-title">36 570 ₽</h2>
+                    <p class="ord-row-meta">За билеты, доп. багаж и все платные услуги</p>
+                  </div>
+                  <span class="ord-chev-down" aria-hidden="true">
+                    <img src="./assets/icons/profile/chevron.svg" alt="" />
+                  </span>
+                </div>
+              </article>
+            </div>
+
+            <article class="ord-card ord-mgmt-card">
+              <div class="ord-mgmt-header">
+                <h3 class="ord-mgmt-title">Управление заказом</h3>
+              </div>
+
+              <div class="ord-data-wrap">
+                <div class="ord-data-block">
+                  <div class="ord-data-row">
+                    <div class="ord-data-text">
+                      <p class="ord-data-value">406021880</p>
+                      <p class="ord-data-hint">заказ от 5 июн 2023</p>
+                    </div>
+                    <button class="ord-data-action" type="button" aria-label="Скопировать номер заказа">
+                      <img src="./assets/icons/orders/copy.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="ord-data-divider"></div>
+                  <div class="ord-data-row">
+                    <div class="ord-data-text">
+                      <p class="ord-data-value">VWYHAI/74ЧЛБ</p>
+                      <p class="ord-data-hint">номер бронирования</p>
+                    </div>
+                    <button class="ord-data-action" type="button" aria-label="Подробнее">
+                      <img src="./assets/icons/orders/info.svg" alt="" />
+                    </button>
+                    <button class="ord-data-action" type="button" aria-label="Скопировать номер бронирования">
+                      <img src="./assets/icons/orders/copy.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="ord-data-divider"></div>
+                  <div class="ord-data-row">
+                    <div class="ord-data-text">
+                      <p class="ord-data-value">Справка о стоимости</p>
+                      <p class="ord-data-hint">можно использовать вместо чека</p>
+                    </div>
+                    <button class="ord-data-action" type="button" aria-label="Скачать справку">
+                      <img src="./assets/icons/orders/download.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="ord-actions-list">
+                <li class="ord-action-item">
+                  <button class="ord-action-row" type="button">
+                    <span class="ord-action-label">Вернуть билет</span>
+                    <img class="ord-action-chev" src="./assets/icons/profile/chevron.svg" alt="" />
+                  </button>
+                </li>
+                <li class="ord-action-divider"></li>
+                <li class="ord-action-item">
+                  <button class="ord-action-row" type="button">
+                    <span class="ord-action-label">Обменять билет</span>
+                    <img class="ord-action-chev" src="./assets/icons/profile/chevron.svg" alt="" />
+                  </button>
+                </li>
+                <li class="ord-action-divider"></li>
+                <li class="ord-action-item">
+                  <button class="ord-action-row" type="button">
+                    <span class="ord-action-label">Изменить данные пассажиров</span>
+                    <img class="ord-action-chev" src="./assets/icons/profile/chevron.svg" alt="" />
+                  </button>
+                </li>
+                <li class="ord-action-divider"></li>
+                <li class="ord-action-item">
+                  <button class="ord-action-row" type="button">
+                    <span class="ord-action-label">Задать любой вопрос по заказу</span>
+                    <img class="ord-action-chev" src="./assets/icons/profile/chevron.svg" alt="" />
+                  </button>
+                </li>
+              </ul>
+            </article>
+
+            <article class="ord-card ord-upsell">
+              <div class="ord-upsell-head">
+                <h2 class="ord-upsell-title">Зарегистрируем вас<br />на все рейсы</h2>
+                <span class="ord-upsell-sticker ord-sticker-money" aria-hidden="true">
+                  <img src="./assets/icons/orders/sticker-money.png" alt="" />
+                </span>
+              </div>
+              <p class="ord-upsell-desc">Пройдём за вас онлайн-регистрацию и пришлём посадочные на почту</p>
+              <p class="ord-upsell-link">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M8 7.5v3.5M8 5.75v.01" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+                Важные нюансы
+              </p>
+              <div class="ord-upsell-controls">
+                <div class="ord-upsell-price-block">
+                  <p class="ord-upsell-price">380 ₽</p>
+                  <p class="ord-upsell-price-note">За всех пассажиров</p>
+                </div>
+                <button class="ord-add-btn" type="button" aria-label="Добавить">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="ord-card ord-upsell">
+              <div class="ord-upsell-head">
+                <h2 class="ord-upsell-title">Страховка для пассажира и багажа</h2>
+                <span class="ord-upsell-sticker ord-sticker-shield" aria-hidden="true">
+                  <img src="./assets/icons/orders/sticker-shield.svg" alt="" />
+                </span>
+              </div>
+              <ul class="ord-feat-list">
+                <li>
+                  <img src="./assets/icons/orders/check-circle.svg" alt="" />
+                  <span>От задержки, потери или повреждения багажа</span>
+                </li>
+                <li>
+                  <img src="./assets/icons/orders/check-circle.svg" alt="" />
+                  <span>От задержки рейса</span>
+                </li>
+                <li>
+                  <img src="./assets/icons/orders/check-circle.svg" alt="" />
+                  <span>От несчастного случая — с выплатой до 500 000 ₽</span>
+                </li>
+              </ul>
+              <p class="ord-upsell-link">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M8 7.5v3.5M8 5.75v.01" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+                Важные нюансы
+              </p>
+              <div class="ord-upsell-controls">
+                <div class="ord-upsell-price-block">
+                  <p class="ord-upsell-price">3 080 ₽</p>
+                  <p class="ord-upsell-price-note">За всех пассажиров</p>
+                </div>
+                <button class="ord-add-btn" type="button" aria-label="Добавить">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <button class="ord-delete-btn" type="button">
+              <img class="ord-icon-24" src="./assets/icons/orders/delete.png" alt="" />
+              Удалить заказ
+            </button>
+          </div>
+        </section>
+
+        <div class="app-snackbar" id="appSnackbar" role="status" aria-live="polite" aria-hidden="true">
+          <span class="app-snackbar-icon" aria-hidden="true">
+            <img src="./assets/icons/allowed.png" alt="" />
+          </span>
+          <span class="app-snackbar-text" id="appSnackbarText">Вы подтвердили новый адрес почты</span>
+        </div>
+
+        <nav class="tabbar" aria-label="Главная навигация">
+          <div class="tabbar-pill">
+            <button class="tab" id="ticketsTab" type="button">
+              <img class="icon-24" src="./assets/icons/tabbar/plane.svg" alt="" />
+              <span>Билеты</span>
+            </button>
+            <button class="tab" type="button">
+              <img class="icon-24" src="./assets/icons/tabbar/hotel.svg" alt="" />
+              <span>Отели</span>
+            </button>
+            <button class="tab" type="button">
+              <img class="icon-24" src="./assets/icons/tabbar/more.svg" alt="" />
+              <span>Впечатления</span>
+            </button>
+            <button class="tab" type="button">
+              <img class="icon-24" src="./assets/icons/tabbar/favorite.svg" alt="" />
+              <span>Избранное</span>
+            </button>
+            <button class="tab profile-tab active" id="profileTab" type="button">
+              <img class="icon-24" src="./assets/icons/tabbar/profile.svg" alt="" />
+              <span>Профиль</span>
+            </button>
+          </div>
+        </nav>
+
+        <aside class="orders-modal" id="ordersModal" aria-hidden="true">
+          <div class="orders-backdrop" id="ordersBackdrop"></div>
+          <div class="orders-sheet" role="dialog" aria-modal="true" aria-labelledby="ordersTitle">
+            <div class="orders-statusbar"></div>
+            <div class="orders-handle" aria-hidden="true"></div>
+            <div class="orders-navbar">
+              <button class="orders-close" id="ordersCloseBtn" type="button" aria-label="Закрыть">
+                <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1.5 1.5L10.5 10.5M10.5 1.5L1.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+            <h2 class="orders-title" id="ordersTitle">Мои заказы</h2>
+            <div class="orders-segmented" role="tablist">
+              <button class="orders-segment is-active" type="button" role="tab" id="ordersTabActive" aria-selected="true" aria-controls="ordersPanelActive">
+                Активные <span class="orders-segment-count">3</span>
+              </button>
+              <button class="orders-segment" type="button" role="tab" id="ordersTabArchive" aria-selected="false" aria-controls="ordersPanelArchive">
+                Архивные <span class="orders-segment-count">0</span>
+              </button>
+            </div>
+            <div class="orders-list" id="ordersPanelActive" role="tabpanel" aria-labelledby="ordersTabActive">
+              <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Стамбул — Екатеринбург" data-order-date="24 дек, чт — 25 дек, пн" data-order-passengers="3">
+                <div class="order-card-row">
+                  <div class="order-details">
+                    <p class="order-title">Стамбул — Екатеринбург</p>
+                    <p class="order-date">24 дек, чт — 25 дек, пн</p>
+                  </div>
+                  <span class="order-logos" aria-hidden="true">
+                    <span class="order-airline-logo"><img src="./assets/icons/orders/airline-s7.png" alt="" /></span>
+                    <span class="order-airline-logo"><img src="./assets/icons/orders/airline-redwings.png" alt="" /></span>
+                  </span>
+                </div>
+              </button>
+              <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Москва — Уфа" data-order-date="24 дек, чт — 25 дек, пн" data-order-passengers="3">
+                <span class="order-badge">Билет от Авиасейлс</span>
+                <div class="order-card-row">
+                  <div class="order-details">
+                    <p class="order-title">Москва — Уфа</p>
+                    <p class="order-date">24 дек, чт — 25 дек, пн</p>
+                  </div>
+                  <span class="order-logos" aria-hidden="true">
+                    <span class="order-airline-logo"><img src="./assets/icons/orders/airline-aeroflot.png" alt="" /></span>
+                  </span>
+                </div>
+              </button>
+              <button class="order-card order-card-button" type="button" data-action="select-order" data-order-title="Стамбул — Екатеринбург" data-order-date="28 дек, сб — 30 дек, пн" data-order-passengers="3">
+                <div class="order-card-row">
+                  <div class="order-details">
+                    <p class="order-title">Стамбул — Екатеринбург</p>
+                    <p class="order-date">28 дек, сб — 30 дек, пн</p>
+                  </div>
+                  <span class="order-logos" aria-hidden="true">
+                    <span class="order-airline-logo"><img src="./assets/icons/orders/airline-s7.png" alt="" /></span>
+                    <span class="order-airline-logo"><img src="./assets/icons/orders/airline-redwings.png" alt="" /></span>
+                  </span>
+                </div>
+              </button>
+            </div>
+            <div class="orders-empty" id="ordersPanelArchive" role="tabpanel" aria-labelledby="ordersTabArchive" hidden>
+              <img class="orders-empty-icon" src="./assets/icons/orders/looking-center-left.svg" alt="" />
+              <div class="orders-empty-text">
+                <p class="orders-empty-title">Архивных заказов пока нет</p>
+                <p class="orders-empty-desc">Здесь будут все завершённые и отменённые заказы</p>
+              </div>
+            </div>
+            <div class="orders-home-indicator" aria-hidden="true"><span></span></div>
+          </div>
+        </aside>
+
+        <aside class="refund-modal" id="refundModal" aria-hidden="true">
+          <div class="refund-backdrop" id="refundBackdrop"></div>
+          <div class="refund-sheet" role="dialog" aria-modal="true" aria-labelledby="refundSheetTitle">
+            <span class="refund-sheet-grabber" aria-hidden="true"></span>
+            <div class="refund-sheet-body">
+              <div class="refund-sheet-main">
+                <div class="refund-sheet-heading">
+                  <h2 class="refund-sheet-title" id="refundSheetTitle">Оформляем возврат?</h2>
+                  <p class="refund-sheet-desc">Заявку нельзя будет отменить</p>
+                </div>
+                <div class="refund-sheet-card">
+                  <div class="refund-sheet-payout">
+                    <p class="refund-sheet-label">Вы получите</p>
+                    <div class="refund-sheet-cost">
+                      <p class="refund-sheet-amount" id="refundSheetAmount">12 010 ₽</p>
+                      <p class="refund-sheet-hint" id="refundSheetHint">на карту в течение 30 рабочих дней</p>
+                    </div>
+                  </div>
+                  <div class="refund-sheet-rows">
+                    <div class="refund-sheet-row">
+                      <p class="refund-sheet-label">Причина возврата</p>
+                      <p class="refund-sheet-value" id="refundSheetReason"></p>
+                    </div>
+                    <div class="refund-sheet-row">
+                      <p class="refund-sheet-label">Рейс</p>
+                      <p class="refund-sheet-value" id="refundSheetFlight"></p>
+                    </div>
+                    <div class="refund-sheet-row">
+                      <p class="refund-sheet-label">Пассажиров</p>
+                      <p class="refund-sheet-value" id="refundSheetPax">3 человека</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="refund-sheet-footer">
+                <label class="refund-sheet-agree">
+                  <input class="refund-sheet-agree-input" id="refundSheetAgree" type="checkbox" />
+                  <span class="refund-sheet-check" aria-hidden="true">
+                    <img src="./assets/icons/check.svg" alt="" />
+                  </span>
+                  <span class="refund-sheet-agree-text">Соглашаюсь с условиями возврата</span>
+                </label>
+                <button class="refund-sheet-submit" id="refundSheetSubmit" type="button" disabled>Оформить возврат</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="refund-modal" id="calcModal" aria-hidden="true">
+          <div class="refund-backdrop" id="calcBackdrop"></div>
+          <div class="refund-sheet calc-sheet" role="dialog" aria-modal="true" aria-label="Детали расчёта">
+            <span class="refund-sheet-grabber" aria-hidden="true"></span>
+            <div class="calc-sheet-body">
+              <div class="calc-row calc-row-head">
+                <p>Стоимость заказа</p>
+                <p>49 000 ₽</p>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-section">
+                <p class="calc-section-title">Штрафы и сборы</p>
+                <div class="calc-row">
+                  <p>Штраф авиакомпании</p>
+                  <p>−10 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>Удержание авиакомпании</p>
+                  <p>−1 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>Невозвратные билеты и услуги</p>
+                  <p>−1 000 ₽</p>
+                </div>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-section">
+                <p class="calc-section-title">Сервисные сборы</p>
+                <div class="calc-row">
+                  <p>За возврат</p>
+                  <p>−1 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>За сопровождение</p>
+                  <p>−1 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>Невозвратные 10% от билета</p>
+                  <p>−10 000 ₽</p>
+                </div>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-section calc-section-plain">
+                <div class="calc-row">
+                  <p>Дополнительные услуги</p>
+                  <p>−5 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>Онлайн-регистрация</p>
+                  <p>−1 000 ₽</p>
+                </div>
+                <div class="calc-row">
+                  <p>Страховка</p>
+                  <p>−1 000 ₽</p>
+                </div>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-section">
+                <div class="calc-row calc-row-total">
+                  <p>Вам вернётся</p>
+                  <p id="calcReturnTotal">20 000 ₽</p>
+                </div>
+                <div class="calc-points" id="calcPointsBlock" hidden>
+                  <div class="calc-row">
+                    <p class="calc-points-label">
+                      Баллами Авиасейлс
+                      <img src="./assets/icons/loyalty-star.svg" alt="" width="16" height="16" />
+                    </p>
+                    <p class="calc-points-value" id="calcPointsValue">4 599</p>
+                  </div>
+                  <div class="calc-row calc-row-money">
+                    <p>Деньгами</p>
+                    <p id="calcMoneyValue">31 001 ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="email-modal" id="emailModal" aria-hidden="true">
+          <div class="email-backdrop" id="emailBackdrop"></div>
+          <div class="email-sheet" role="dialog" aria-modal="true" aria-labelledby="emailModalTitle">
+            <div class="email-sheet-head">
+              <span class="email-handle" aria-hidden="true"></span>
+              <h2 class="email-title" id="emailModalTitle">Изменение почты</h2>
+              <button class="email-close" id="emailCloseBtn" type="button" aria-label="Закрыть">
+                <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1.5 1.5L10.5 10.5M10.5 1.5L1.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="email-content email-content-form" id="emailContentForm">
+              <p class="email-desc">Напишите новый адрес почты — мы привяжем её к заказу и отправим туда билет</p>
+              <div class="email-input-wrap" id="emailInputWrap">
+                <label class="email-input-label" for="emailInput">Почта</label>
+                <input class="email-input" id="emailInput" type="email" placeholder=" " autocomplete="email" />
+              </div>
+              <button class="email-confirm-btn" id="emailConfirmBtn" type="button" disabled>Подтвердить</button>
+            </div>
+            <div class="email-content email-content-sent" id="emailContentSent" hidden>
+              <p class="email-sent-text">Готово! Мы отправили письмо на почту <strong id="emailSentAddress">k.konstantinopol@yandex.ru</strong></p>
+              <p class="email-sent-text">Нажмите на кнопку в письме, чтобы подтвердить новый адрес. Если не сможете найти письмо, проверьте папку «Спам».</p>
+            </div>
+            <div class="email-home-indicator" aria-hidden="true"><span></span></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

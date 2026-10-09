@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hearts burst — Lottie</title>
+    <link rel="stylesheet" href="./hearts-burst.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #dfe3ea;
+        font-family: "Inter", "SF Pro Text", sans-serif;
+        color: #0c131d;
+      }
+
+      h1 {
+        margin: 0 0 4px;
+        font-size: 20px;
+      }
+
+      .lead {
+        margin: 0 0 28px;
+        max-width: 780px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #4a5462;
+      }
+
+      .scenes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+      }
+
+      .scene-title {
+        margin: 0 0 12px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: #4a5462;
+      }
+
+      .scene-note {
+        margin: 12px 0 0;
+        max-width: 440px;
+        font-size: 13px;
+        line-height: 18px;
+        color: #4a5462;
+      }
+
+      /* ===== Сцена 1: композиция как есть, 440x120 ===== */
+
+      .comp {
+        position: relative;
+        width: 440px;
+        height: 120px;
+        background: #fff;
+        border-radius: 12px;
+        outline: 1px dashed #9aa4b2;
+        outline-offset: -1px;
+      }
+
+      /* ===== Сцена 2: анимация внутри макета шита ===== */
+
+      .sheet-wrap {
+        /* поле вокруг шита, чтобы было видно улетевшие сердечки при снятой обрезке */
+        padding: 40px 48px;
+        background: repeating-linear-gradient(
+          45deg,
+          #d3d8e0,
+          #d3d8e0 8px,
+          #cdd3db 8px,
+          #cdd3db 16px
+        );
+        border-radius: 16px;
+      }
+
+      .sheet {
+        position: relative;
+        width: 374px;
+        height: 227px;
+        border-radius: 38px 38px 40px 40px;
+        background: #fff;
+        box-shadow: 0 15px 75px rgba(0, 0, 0, 0.18);
+      }
+
+      .sheet.is-clipping {
+        overflow: hidden;
+      }
+
+      /* Текст шита лежит под анимацией — так видно, как сердечки идут по заголовку */
+      .sheet-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 83px;
+        text-align: center;
+      }
+
+      .sheet-text h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .sheet-text p {
+        margin: 8px 0 0;
+        font-size: 17px;
+        line-height: 22px;
+      }
+
+      /* Вью центрируется по иконке сердца: в макете она стоит в точке (187, 59),
+         центр композиции — (220, 60), отсюда смещение */
+      .sheet .lottie {
+        position: absolute;
+        left: -33px;
+        top: -1px;
+        width: 440px;
+        height: 120px;
+      }
+
+      .comp .lottie {
+        position: absolute;
+        inset: 0;
+      }
+
+      /* ===== Сцена 3: та же анимация на CSS, без Lottie ===== */
+
+      .comp .hearts-burst {
+        position: absolute;
+        left: calc(50% - 12px);
+        top: calc(50% - 12px);
+      }
+
+      /* ===== Управление ===== */
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 32px;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 8px 14px;
+        border: 0;
+        border-radius: 10px;
+        background: #0c73fe;
+        color: #fff;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+
+      input[type="range"] {
+        width: 280px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hearts burst</h1>
+    <p class="lead">
+      Слева — composition как она лежит в файле: 440×120, сердце в центре. Справа — она же на
+      своём месте в шите. Снимите галочку «обрезка контейнером», чтобы увидеть, зачем шиту нужен
+      overflow: hidden — три крайние частицы уходят за его боковые границы.
+    </p>
+
+    <div class="scenes">
+      <section>
+        <p class="scene-title">Композиция 440×120</p>
+        <div class="comp"><div class="lottie" id="lottieComp"></div></div>
+        <p class="scene-note">
+          Пунктир — границы композиции. Разлёт вписан в них с запасом 3 px, поэтому сам файл
+          ничего не режет.
+        </p>
+      </section>
+
+      <section>
+        <p class="scene-title">В макете шита</p>
+        <div class="sheet-wrap">
+          <div class="sheet is-clipping" id="sheet">
+            <div class="sheet-text">
+              <h2>Спасибо за отзыв!</h2>
+              <p>Если будут ещё вопросы — пишите, я всегда рядом</p>
+            </div>
+            <div class="lottie" id="lottieSheet"></div>
+          </div>
+        </div>
+        <p class="scene-note">
+          Штриховка — область за пределами шита. Всё, что на неё попадает, в приложении окажется
+          поверх затемнения и контента под шитом.
+        </p>
+      </section>
+      <section>
+        <p class="scene-title">Она же на CSS, без Lottie</p>
+        <div class="comp">
+          <span class="hearts-burst" id="cssHearts">
+            <span class="hearts-burst__particles"></span>
+          </span>
+        </div>
+        <p class="scene-note">
+          Вариант из <code>hearts-burst.css</code> и <code>hearts-burst.js</code>. Покадрово не
+          перематывается — только проигрывается целиком, кнопкой ниже. Разлёт каждый раз чуть
+          другой: в отличие от Lottie, углы и размеры здесь случайные.
+        </p>
+      </section>
+    </div>
+
+    <div class="controls">
+      <button id="play" type="button">Проиграть</button>
+      <input id="frame" type="range" min="0" max="114" step="1" value="0" />
+      <span id="readout">кадр 0</span>
+      <label><input id="clip" type="checkbox" checked /> обрезка контейнером</label>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+      const load = (container) =>
+        lottie.loadAnimation({
+          container,
+          renderer: "svg",
+          loop: false,
+          autoplay: false,
+          path: "./hearts-burst.json",
+        });
+
+      /* Два инстанса одного файла: гоняем их синхронно, чтобы сцены не разъезжались */
+      const anims = [
+        load(document.getElementById("lottieComp")),
+        load(document.getElementById("lottieSheet")),
+      ];
+
+      const slider = document.getElementById("frame");
+      const readout = document.getElementById("readout");
+
+      anims[0].addEventListener("DOMLoaded", () => {
+        slider.max = Math.round(anims[0].totalFrames);
+        window.lottieReady = true;
+      });
+
+      const stopAt = (frame) => {
+        anims.forEach((anim) => anim.goToAndStop(frame, true));
+        slider.value = frame;
+        readout.textContent = `кадр ${frame}`;
+      };
+
+      slider.addEventListener("input", () => stopAt(Number(slider.value)));
+
+      document.getElementById("play").addEventListener("click", () => {
+        anims.forEach((anim) => anim.goToAndPlay(0, true));
+      });
+
+      document.getElementById("clip").addEventListener("change", (event) => {
+        document.getElementById("sheet").classList.toggle("is-clipping", event.target.checked);
+      });
+
+      /* Ручка для проверки из консоли/CDP */
+      window.showFrame = (frame) => {
+        stopAt(frame);
+        return frame;
+      };
+    </script>
+
+    <script type="module">
+      import { createHeartIcon, playHeartsBurst } from "./hearts-burst.js";
+
+      const root = document.getElementById("cssHearts");
+      root.prepend(createHeartIcon());
+
+      document
+        .getElementById("play")
+        .addEventListener("click", () => playHeartsBurst(root));
+
+      window.cssHeartsReady = true;
+    </script>
+  </body>
+</html>

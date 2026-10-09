@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оценка ассистента — прототип</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-root">
+      <section class="phone-frame" aria-label="Умная поддержка 390x844">
+        <div class="statusbar">
+          <span class="statusbar-time">9:41</span>
+          <img class="statusbar-levels" src="../assets/icons/ios-statusbar-levels.svg" alt="" />
+        </div>
+
+        <header class="nav" id="nav">
+          <div class="toolbar">
+            <button class="nav-back" type="button" aria-label="Назад">
+              <img src="../assets/icons/profile/chevron.svg" alt="" />
+            </button>
+            <div class="nav-title">
+              <p class="nav-title-main">Умная поддержка</p>
+              <p class="nav-title-sub">Первая версия нейросети</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="chat" id="chat">
+          <div class="chat-bubbles" id="chatBubbles">
+            <div class="chat-bubble">
+              Привет! Я — умный ассистент Авиасейлс. Знаю всё про билеты, перелёты и багаж, помогу с вопросами по вашим заказам
+            </div>
+            <div class="chat-bubble">
+              Опишите свою ситуацию как можно подробнее — так я быстрее со всем разберусь
+            </div>
+            <div class="chat-bubble">С чем нужна помощь?</div>
+
+            <div class="chat-bubble chat-bubble-user">Не пришёл билет на почту</div>
+
+            <div class="chat-bubble">
+              Если билет не пришёл, проверьте папку «Спам» и «Промоакции» — иногда письма могут попасть туда. Обычно билет приходит в течение 3 часов. Если прошло более 24 часов с момента покупки, и вы не получили билет, проверьте раздел «Мои заказы» — там можно скачать билет, если вы покупали его напрямую у нас.
+            </div>
+
+            <div class="chat-bubble chat-bubble-user">Ответ не помог</div>
+
+            <div class="chat-bubble">
+              <p>Готово! Передал ваше обращение в поддержку 💙</p>
+              <p>
+                У вас есть услуга <strong>Приоритетная поддержка</strong> — напишем вам на почту
+                <strong>example@gmail.com</strong> в ближайшие 10 минут. Не забудьте проверить папку
+                «Спам», чтобы не пропустить письмо.
+              </p>
+            </div>
+
+            <div class="chat-bubble chat-bubble-user">Спасибо, всё понятно</div>
+
+            <div class="chat-bubble chat-rating" id="ratingWidget">
+              <div class="rating-content">
+                <p class="rating-text">
+                  <strong class="rating-title">Оцените мою работу</strong>
+                  Учусь на ваших отзывах, чтобы в следующий раз помочь быстрее.
+                </p>
+                <div class="rating-scale" role="group" aria-label="Оценка работы ассистента">
+                  <button class="rating-option" type="button" data-score="1" data-label="Ужасно">
+                    <img
+                      class="rating-emoji"
+                      src="../assets/Эмодзи/Private.Answer/Emoticons/FaceSadColored.png"
+                      alt=""
+                    />
+                    <span class="rating-label">Ужасно</span>
+                  </button>
+                  <button class="rating-option" type="button" data-score="2" data-label="Плохо">
+                    <img
+                      class="rating-emoji"
+                      src="../assets/Эмодзи/Private.Answer/Emoticons/FaceSadColored-1.png"
+                      alt=""
+                    />
+                    <span class="rating-label">Плохо</span>
+                  </button>
+                  <button class="rating-option" type="button" data-score="3" data-label="Пойдёт">
+                    <img
+                      class="rating-emoji"
+                      src="../assets/Эмодзи/Private.Answer/Emoticons/FaceSmileColored.png"
+                      alt=""
+                    />
+                    <span class="rating-label">Пойдёт</span>
+                  </button>
+                  <button class="rating-option" type="button" data-score="4" data-label="Хорошо">
+                    <img
+                      class="rating-emoji"
+                      src="../assets/Эмодзи/Private.Answer/Emoticons/FaceLaughingColored.png"
+                      alt=""
+                    />
+                    <span class="rating-label">Хорошо</span>
+                  </button>
+                  <button class="rating-option" type="button" data-score="5" data-label="Супер">
+                    <img
+                      class="rating-emoji rating-emoji-s"
+                      src="../assets/Эмодзи/Private.Answer/SmilingFaceWithHeartEyes.png"
+                      alt=""
+                    />
+                    <span class="rating-label">Супер</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-suggests" id="chatSuggests" hidden></div>
+        </div>
+
+        <div class="bottom-bar">
+          <form class="input" id="chatForm">
+            <input
+              class="input-field"
+              id="chatInput"
+              type="text"
+              placeholder="Напишите что-нибудь"
+              aria-label="Сообщение"
+              autocomplete="off"
+            />
+            <button class="input-btn" id="chatSendBtn" type="submit" aria-label="Отправить">
+              <span class="input-btn-circle" aria-hidden="true"></span>
+              <img class="input-icon-mic" src="../assets/icons/microphone.svg" alt="" />
+              <svg
+                class="input-icon-send"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.2061 6L21 7.4L12.5605 22L11.4756 21.71L10.4141 13.9463L15.335 11.0156L14.3115 9.29688L9.44824 12.1934L3 7.08105L3.29004 6H20.2061Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <nav class="tabbar" aria-label="Основная навигация">
+            <span class="tabbar-selection" aria-hidden="true"></span>
+            <button class="tab is-active" type="button">
+              <img src="../assets/icons/tabbar/plane.svg" alt="" />
+              <span>Билеты</span>
+            </button>
+            <button class="tab" type="button">
+              <img src="../assets/icons/tabbar/hotel.svg" alt="" />
+              <span>Отели</span>
+            </button>
+            <button class="tab" type="button">
+              <img src="../assets/icons/tabbar/more.svg" alt="" />
+              <span>Впечатления</span>
+            </button>
+            <button class="tab" type="button">
+              <img src="../assets/icons/tabbar/favorite.svg" alt="" />
+              <span>Избранное</span>
+            </button>
+            <button class="tab" type="button">
+              <img src="../assets/icons/tabbar/profile.svg" alt="" />
+              <span>Профиль</span>
+            </button>
+          </nav>
+        </div>
+
+        <div class="sheet-overlay" id="sheetOverlay" hidden>
+          <div
+            class="sheet"
+            id="sheet"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sheetTitle"
+          >
+            <span class="sheet-grabber" aria-hidden="true"></span>
+            <div class="sheet-content">
+              <div class="sheet-block">
+                <div class="sheet-heading">
+                  <h2 class="sheet-title" id="sheetTitle">Оцените мою работу</h2>
+                  <p class="sheet-desc">
+                    Учусь на ваших отзывах, чтобы<br />в следующий раз помочь быстрее
+                  </p>
+                </div>
+                <div class="rating-scale sheet-scale" id="sheetScale" role="group" aria-label="Оценка работы ассистента"></div>
+              </div>
+
+              <div class="sheet-block">
+                <p class="sheet-question" id="sheetQuestion">Что вас расстроило?</p>
+                <div class="sheet-chips" id="sheetChips"></div>
+                <textarea
+                  class="sheet-textarea"
+                  id="sheetTextarea"
+                  rows="3"
+                  placeholder="Ну смотрите..."
+                  aria-label="Комментарий"
+                ></textarea>
+              </div>
+
+              <button class="sheet-submit" id="sheetSubmit" type="button">Отправить</button>
+            </div>
+          </div>
+
+          <div
+            class="sheet sheet-thanks"
+            id="thanksSheet"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="thanksTitle"
+            hidden
+          >
+            <span class="sheet-grabber" aria-hidden="true"></span>
+            <div class="sheet-content sheet-content-thanks">
+              <div class="thanks-heading">
+                <p class="thanks-icon" id="thanksIcon">
+                  <img src="../assets/icons/heart.svg" alt="" />
+                  <span class="hearts" id="hearts" aria-hidden="true"></span>
+                </p>
+                <h2 class="sheet-title" id="thanksTitle">Спасибо за отзыв!</h2>
+                <p class="sheet-desc" id="thanksDesc">Если будут ещё вопросы — пишите, я всегда рядом</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
